@@ -1,0 +1,20 @@
+import * as React from 'react';
+import { shallow } from 'enzyme';
+import {{properCase name}} from './{{properCase name}}';
+
+describe('{{properCase name}} Component', () => {
+  it('should be defined', () => {
+    expect({{properCase name}}).toBeDefined();
+  });
+
+  const component = shallow((
+    <{{properCase name}} />
+  ));
+
+  describe('Check if', () => {
+    test('Renders component', () => {
+      expect(component).toMatchSnapshot();
+    });
+
+  });
+});

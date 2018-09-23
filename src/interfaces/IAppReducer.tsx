@@ -1,3 +1,4 @@
 export default interface IAppReducer {
-    testData: any;
+    locale: string;
+    uiTranslationsLoaded: boolean;
 }

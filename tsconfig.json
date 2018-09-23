@@ -4,11 +4,15 @@
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "commonjs",
+        "moduleResolution": "node",
         "target": "es5",
         "jsx": "react",
-        "lib": ["es5", "es6", "dom"]
+        "lib": ["es5", "es6", "dom", "es2017"],
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     },
     "include": [
         "./src/**/*"
-    ]
+    ],
+    "exclude": ["node_modules"]
 }

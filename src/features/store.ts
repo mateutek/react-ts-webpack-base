@@ -1,7 +1,9 @@
 import { applyMiddleware, createStore , compose } from 'redux';
 import thunk from 'redux-thunk';
 import mainRootReducer from './index.main';
+import { routerMiddleware as createRouterMiddleware } from 'react-router-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 const reduxOptions = {
     name: 'MainPage',
@@ -13,8 +15,11 @@ const composeEnhancers = (
     composeWithDevTools(reduxOptions)
 ) || compose;
 
+export const browserHistory = createBrowserHistory();
+const routerMiddleware = createRouterMiddleware(browserHistory);
+
 const enhancer = composeEnhancers(
-    applyMiddleware(thunk)
+    applyMiddleware(thunk, routerMiddleware)
 );
 const store = createStore(mainRootReducer, enhancer);
 
