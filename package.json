@@ -46,7 +46,7 @@
     "@types/react-router-dom": "^4.3.1",
     "@types/react-router-redux": "^5.0.16",
     "awesome-typescript-loader": "^5.2.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
     "express": "^4.16.3",
